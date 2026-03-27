@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:fragment="form">
+    <input th:value="${cinema.id}" type="hidden" name="id" >
+    <div class="form-group">
+        <label for="cinemaSelect">Cinema Select</label>
+        <select class="form-control" id="cinemaSelect"  name="cinemaSelect" placeholder="Select Cinema Location" required>
+            <option th:value="${cinema.location}"></option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</body>
+</html>
