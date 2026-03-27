@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:fragment="form">
+    <input th:value="${ticket.id}" type="hidden" name="id" >
+    <div class="form-group">
+        <label for="sessionDetail">Session Detail</label>
+        <input th:value="${tickets.sessionDetail}" type="text" class="form-control" id="sessionDetail"  name="sessionDetail" placeholder="Enter Session Detail" required>
+    </div>
+    <div class="form-group">
+        <label for="numberOfTicket">Number of Tickets:</label>
+        <input th:value="${tickets.numOfTicket}" type="number" class="form-control" id="numberOfTicket" name="numOfTicket" placeholder="numOfTicket" required min="1" max="20">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+INSERT INTO tickets(sessionDetail, numOfTickets) VALUES ('test', 12);

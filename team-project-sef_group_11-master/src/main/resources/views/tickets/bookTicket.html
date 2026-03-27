@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Common head content is included from common.html  -->
+    <th:block th:include="/views/fragments/common.html :: commonhead"></th:block>
+
+    <!-- Include custom head for this head after this line -->
+    <link href="/css/bookTicketStyle.css" rel="stylesheet">
+    <title>Page Title</title>
+</head>
+
+<body>
+
+<!-- Nav bar is located in common.html -->
+<header th:replace="/views/fragments/common.html :: header"></header>
+
+<br><br><br>
+<form action="/action_page.php" class="selectMovie">
+
+    <fieldset>
+        <h4>Select Movie:</h4>
+        <select style="text-align: left">
+            <option th:each="movies : ${movies}" th:text="${movies.title}" th:value="${movies.id}">Title</option>
+        </select>
+    </fieldset>
+
+
+<!--    <fieldset>-->
+<!--        <legend>Select Cinema:</legend>-->
+<!--        <select id="cinema" name="cinema">-->
+<!--            <option value="1">Melbourne Central</option>-->
+<!--            <option value="2">Crown Casino</option>-->
+<!--            <input type="submit" value="set cinema">-->
+<!--        </select>-->
+<!--    </fieldset>-->
+
+<!--    <fieldset>-->
+<!--        <legend>Select Session:</legend>-->
+<!--        <input type="text" id="fname" name="fname" value=""><br>-->
+<!--    </fieldset>-->
+
+    <button onclick=""><a href="/bookTicket/seatSelect" class="link">Confirm Selection</a></button>
+</form>
+
+</body>
+
+<!-- Footer is located in common.html -->
+<footer class="footer" th:replace="/views/fragments/common.html :: footer"></footer>
+
+<!-- Bootstrap Scripts  -->
+<th:block th:include="/views/fragments/common.html :: scripts"></th:block>

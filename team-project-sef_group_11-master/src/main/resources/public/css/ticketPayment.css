@@ -1,0 +1,9 @@
+#card-body{
+    text-align: center;
+    border: black 1px solid;
+    width: 25%;
+}
+
+body{
+    background-color: lightblue;
+}
